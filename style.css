@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    color: #1e293b;
+    background: #eef2f7;
+}
+
+.timer-card {
+    width: 100%;
+    max-width: 520px;
+    padding: 38px 28px;
+    text-align: center;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 12px 35px rgba(15, 23, 42, 0.09);
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.description {
+    color: #64748b;
+}
+
+.timer {
+    margin: 28px 0 12px;
+    color: #1d4ed8;
+    font-size: clamp(64px, 15vw, 100px);
+    font-weight: bold;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 3px;
+}
+
+.timer.warning {
+    color: #dc2626;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.65;
+    }
+}
+
+.status {
+    min-height: 22px;
+    color: #64748b;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+button {
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button.secondary {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+button.secondary:hover {
+    background: #cbd5e1;
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.55);
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 360px;
+    padding: 28px;
+    text-align: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #dc2626;
+}
+
+@media (max-width: 480px) {
+    .timer-card {
+        padding: 28px 18px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    .actions button {
+        flex: 1 1 40%;
+    }
+}

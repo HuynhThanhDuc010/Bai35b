@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đồng hồ đếm ngược 10 phút</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="timer-card">
+        <p class="eyebrow">BÀI TẬP JAVASCRIPT</p>
+        <h1>Đồng hồ đếm ngược</h1>
+        <p class="description">Thời gian bắt đầu: 10 phút</p>
+
+        <div id="timer" class="timer" role="timer" aria-live="off">10:00</div>
+        <p id="status" class="status">Đồng hồ đang chạy</p>
+
+        <div class="actions">
+            <button id="startButton" type="button">Bắt đầu</button>
+            <button id="pauseButton" type="button" class="secondary">Tạm dừng</button>
+            <button id="resetButton" type="button" class="secondary">Đặt lại</button>
+        </div>
+    </main>
+
+    <div id="timeUpModal" class="modal" role="dialog"
+         aria-modal="true" aria-labelledby="modalTitle" hidden>
+        <div class="modal-content">
+            <h2 id="modalTitle">Hết thời gian!</h2>
+            <p>Bạn đã sử dụng hết 10 phút đếm ngược.</p>
+            <button id="closeModalButton" type="button">Đóng</button>
+        </div>
+    </div>
+</body>
+</html>
